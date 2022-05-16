@@ -1,6 +1,7 @@
 package main;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class TorpedoJatek {
 
@@ -10,6 +11,11 @@ public class TorpedoJatek {
     private int[] mezok;
     private int[] hajok;
     private int tipp;
+    private int gepTipp;
+    private int min = 1;
+    private int max = 7;
+    int range = max - min + 1;
+    boolean talalat = false;
 
     public TorpedoJatek(int tipp) {
         mezokFeltolt();
@@ -48,11 +54,41 @@ public class TorpedoJatek {
         }
     }
     
-    public void tippTorpedo(){
-        
+
+    
+     public void tippTorpedoGep() {
+
+        int gepTipp = (int) (Math.random() * range) + min;
+
+        for (int i = 0; i < mezok.length; i++) {
+            if (gepTipp == hajok[i]) {
+
+                System.out.println("A gépnek lett egy találata!");
+            } else {
+
+                System.out.println("A gép nem talált!");
+            }
+        }
     }
     
     public boolean tippHajokEll(){
+        
+         Scanner tipp = new Scanner(System.in);
+         System.out.println("Add meg a tipped!");
+         
+         for (int i = 0; i < mezok.length; i++) {
+            if (gepTipp == hajok[i]) {
+
+                System.out.println("Gratulálok! Lett egy találat!");
+            } else {
+
+                System.out.println("Sajnos nem talált!");
+            }
+            
+        }
+ 
+        
+        
         return true;
     }
 }

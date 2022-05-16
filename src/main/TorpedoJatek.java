@@ -56,39 +56,37 @@ public class TorpedoJatek {
     
 
     
-     public void tippTorpedoGep() {
-
+     private void tippTorpedoGep() {
         int gepTipp = (int) (Math.random() * range) + min;
 
-        for (int i = 0; i < mezok.length; i++) {
-            if (gepTipp == hajok[i]) {
-
-                System.out.println("A gépnek lett egy találata!");
-            } else {
-
-                System.out.println("A gép nem talált!");
-            }
-        }
+        
+        tippHajokEll(gepTipp);
+//        for (int i = 0; i < mezok.length; i++) {
+//            if (gepTipp == hajok[i]) {
+//
+//                System.out.println("A gépnek lett egy találata!");
+//            } else {
+//
+//                System.out.println("A gép nem talált!");
+//            }
+//        }
+    }
+     
+    public void tippTorpedoJatekos(){
+        int jatekosTipp;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Add meg a tipped!");
+        jatekosTipp=sc.nextInt();
     }
     
-    public boolean tippHajokEll(){
-        
-         Scanner tipp = new Scanner(System.in);
-         System.out.println("Add meg a tipped!");
-         
+    public boolean tippHajokEll(int tipp){
          for (int i = 0; i < mezok.length; i++) {
             if (gepTipp == hajok[i]) {
-
                 System.out.println("Gratulálok! Lett egy találat!");
             } else {
-
                 System.out.println("Sajnos nem talált!");
             }
-            
         }
- 
-        
-        
         return true;
     }
     

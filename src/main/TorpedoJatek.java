@@ -5,7 +5,7 @@ import java.util.Random;
 public class TorpedoJatek {
 
     private final int MEZO_SZAM=7;
-    private final int HAJO_HOSSZ=3;    
+    private final int HAJO_HOSSZ=3;
     
     private int[] mezok;
     private int[] hajok;
@@ -17,14 +17,14 @@ public class TorpedoJatek {
         this.tipp = tipp;
     }
     
-    public void mezokFeltolt(){
+    private void mezokFeltolt(){
         mezok = new int[MEZO_SZAM];
         for (int i = 0; i < MEZO_SZAM; i++) {
             mezok[i]=i+1;
         }
     }
     
-    public void hajokElhelyez(){
+    private void hajokElhelyez(){
         hajok = new int[HAJO_HOSSZ];
         
         int hajoElsoResz;
@@ -54,5 +54,9 @@ public class TorpedoJatek {
     
     public boolean tippHajokEll(){
         return true;
+    }
+    
+    public void jatek(){
+        
     }
 }
